@@ -21,7 +21,13 @@
 
 ## 🎬 Демо
 
-https://github.com/MakazhanAlpamys/Kaspi-Analytics-Platform/raw/main/demo.mp4
+<p align="center">
+  <img src="image.png" alt="Kaspi Analytics Platform" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/MakazhanAlpamys/Kaspi-Analytics-Platform/raw/main/demo.mp4">📥 Скачать видео-демо (demo.mp4)</a>
+</p>
 
 ---
 
@@ -80,6 +86,7 @@ kaspi/
 │   └── public/               # Статические ресурсы
 │
 ├── demo.mp4                  # Видео-демо
+├── image.png                 # Скриншот платформы
 └── README.md
 ```
 

@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+:root {
+  --kaspi-red: #F14635;
+  --kaspi-red-dark: #D63B2C;
+  --kaspi-red-light: #FF6B5B;
+  --kaspi-dark: #1D1D1F;
+  --kaspi-gray-900: #2D2D2F;
+  --kaspi-gray-700: #4A4A4C;
+  --kaspi-gray-500: #8E8E93;
+  --kaspi-gray-300: #C7C7CC;
+  --kaspi-gray-100: #F2F2F7;
+  --kaspi-gray-50: #F9F9FB;
+  --kaspi-white: #FFFFFF;
+  --sidebar-width: 260px;
+}
+
+@theme inline {
+  --color-kaspi-red: var(--kaspi-red);
+  --color-kaspi-red-dark: var(--kaspi-red-dark);
+  --color-kaspi-red-light: var(--kaspi-red-light);
+  --color-kaspi-dark: var(--kaspi-dark);
+  --color-kaspi-gray-900: var(--kaspi-gray-900);
+  --color-kaspi-gray-700: var(--kaspi-gray-700);
+  --color-kaspi-gray-500: var(--kaspi-gray-500);
+  --color-kaspi-gray-300: var(--kaspi-gray-300);
+  --color-kaspi-gray-100: var(--kaspi-gray-100);
+  --color-kaspi-gray-50: var(--kaspi-gray-50);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--kaspi-gray-50);
+  color: var(--kaspi-dark);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+}
+
+/* Dark mode */
+html.dark body {
+  background: #111113;
+  color: #E5E5EA;
+}
+
+html.dark .bg-white {
+  background-color: #1C1C1E !important;
+}
+
+html.dark .bg-kaspi-gray-50 {
+  background-color: #111113 !important;
+}
+
+html.dark .bg-kaspi-gray-100 {
+  background-color: #2C2C2E !important;
+}
+
+html.dark .text-kaspi-dark {
+  color: #F2F2F7 !important;
+}
+
+html.dark .text-kaspi-gray-700 {
+  color: #C7C7CC !important;
+}
+
+html.dark .text-kaspi-gray-500 {
+  color: #8E8E93 !important;
+}
+
+html.dark .border-kaspi-gray-100 {
+  border-color: #2C2C2E !important;
+}
+
+html.dark .bg-kaspi-dark {
+  background-color: #000000 !important;
+}
+
+html.dark input,
+html.dark select {
+  background-color: #2C2C2E !important;
+  color: #F2F2F7 !important;
+  border-color: #3A3A3C !important;
+}
+
+html.dark table thead tr {
+  background-color: #1C1C1E !important;
+}
+
+html.dark table tbody tr:hover {
+  background-color: #2C2C2E !important;
+}
+
+html.dark .shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .bg-green-50 {
+  background-color: #052e16 !important;
+}
+html.dark .bg-red-50 {
+  background-color: #2a0a0a !important;
+}
+html.dark .bg-yellow-50 {
+  background-color: #2a1a03 !important;
+}
+html.dark .bg-blue-50 {
+  background-color: #0c1a3f !important;
+}
+html.dark .text-green-800 {
+  color: #86efac !important;
+}
+html.dark .text-green-700 {
+  color: #4ade80 !important;
+}
+html.dark .text-red-800 {
+  color: #fca5a5 !important;
+}
+html.dark .text-red-700 {
+  color: #f87171 !important;
+}
+html.dark .text-yellow-800 {
+  color: #fde68a !important;
+}
+html.dark .text-yellow-700 {
+  color: #fcd34d !important;
+}
+html.dark .text-blue-800 {
+  color: #93c5fd !important;
+}
+html.dark .text-blue-700 {
+  color: #60a5fa !important;
+}
+html.dark .border-green-200 {
+  border-color: #14532d !important;
+}
+html.dark .border-red-200 {
+  border-color: #450a0a !important;
+}
+html.dark .border-yellow-200 {
+  border-color: #451a03 !important;
+}
+html.dark .border-blue-200 {
+  border-color: #1e3a5f !important;
+}
+
+html.dark .card-hover:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--kaspi-gray-300);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kaspi-gray-500);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.stagger > * {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger > *:nth-child(7) { animation-delay: 0.35s; }
+.stagger > *:nth-child(8) { animation-delay: 0.4s; }
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}

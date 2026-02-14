@@ -21,9 +21,7 @@
 
 ## 🎬 Демо
 
-https://github.com/user-attachments/assets/demo.mp4
-
-<video src="demo.mp4" controls width="100%"></video>
+https://github.com/MakazhanAlpamys/Kaspi-Analytics-Platform/raw/main/demo.mp4
 
 ---
 
